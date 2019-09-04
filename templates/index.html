@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../static/vendor/materialize/css/materialize.min.css">    
+    <link rel="stylesheet" href="/modal.js">
+    <title>Index</title>
+</head>
+<body>
+
+        <nav>
+                <div class="nav-wrapper">
+                    <div class="container">
+                            <a href="../static/vendor/img/logoentregapp.jpg" class="brand-logo">Entregapp</a>
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li ><a  onclick=""   class="modal-trigger" href="#modaluniversal" href="/">Iniciar Sesion</a></li>
+                            <!-- Modal Trigger -->
+                            <li><a class="" href="/registro">Registro</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+           
+        
+            <div class="section">
+                <!-- Modal Structure -->
+                <div id="modaluniversal" class="modal">
+                    <div class="modal-content">
+                        <i class="modal-close material-icons right">cancel</i>
+                        <form  id="logiarse"  action="" method="GET" class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                <i class="material-icons prefix">mail</i>
+                                <input oninput="escribiendo()" id="email" name="correo" type="email" class="validate">
+                                <label for="email">Correo electronico</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                <i class="material-icons prefix">https</i>
+                                <input oninput="escribiendo()" id="password" name="contraseña" type="password" class="validate">
+                                <label for="email">Contraseña</label>
+                                </div>
+                            </div>
+                            
+                            <div class="center">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Ingresar
+                                    <i class="material-icons right">send</i>
+                                  </button>
+                                </div>       
+                     </form>
+                    </div>
+                </div>
+            </div>
+
+            
+    <!-- Compiled and minified JavaScript -->
+<script src="../static/vendor/materialize/js/materialize.min.js"></script>
+    
+<script>
+    M.AutoInit();
+</script>
+</body>
+</html>
+
