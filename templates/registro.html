@@ -1,202 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="../static/vendor/materialize/css/materialize.min.css">   
-    
-    <!--hoja de estilos de registro-->
-    <link rel="stylesheet" href="../static/vendor/materialize/css/registro.css">
-
-    <!--fuentes de google-->
-    <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
-    
-    <!--Archivo javascript-->
-    <link rel="stylesheet" href="/modal.js">
-
-    <title>Registro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../">
+  <title>Document</title>
 </head>
 <body>
-
-<!--Menu de navegacion-->
-  <nav>
-    <div class="nav-wrapper  red darken-4">
-      <div class="container">
-        <a href="../static/vendor/img/logoentregapp.jpg" class="brand-logo">Entregapp</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <i ><a  onclick=""   class="modal-trigger" href="#modaluniversal" href="/">Iniciar Sesion</a></li>
-            <!-- Modal Trigger -->
-            <li><a  onclick="" class="" href="#modaluniversal">Registro</a></li>
-          </ul>
-      </div>
-    </div>
-  </nav>
-           
-  <!--section modal del formulario de inicio de sesion-->      
-  <div class="section">
-    <!-- Modal Structure -->
-    <div id="modaluniversal" class="modal">
-      <div class="modal-content">
-        <i class="modal-close material-icons right">cancel</i>
-        <form  id="logiarse"  action="" method="GET" class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">mail</i>
-              <input oninput="escribiendo()" id="email" name="correo" type="email" class="validate">
-              <label for="email">Correo electronico</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">https</i>
-              <input oninput="escribiendo()" id="password" name="contraseña" type="password" class="validate">
-              <label for="email">Contraseña</label>
-            </div>
-          </div>
-                            
-          <div class="center">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Ingresar
-              <i class="material-icons right">send</i>
-            </button>
-          </div>       
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!--seccion del formulario de registro de usuarios-->
-  <div class="container" id="formulario">
-    <div class="container">
-      <h1>Formulario de registro</h1>
-    </div>
-
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">library_books</i>
-            <input type="text" name="numeroDocumento" class="autocomplete" required>
-            <label for="autocomplete-input">Numero Documento</label>
-          </div>
-        </div>
-                        
-        <div class="row">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">supervisor_account</i>
-            <input name="nombre"  id="first_name" type="text" class="autocomplete" required>
-            <label for="first_name">Nombre</label>
-          </div>
-
-          <div class="input-field col s6">
-            <i class="material-icons prefix">supervisor_account</i>
-            <input name="apellidos"  id="last_name" type="text" class="autocomplete" required>
-            <label for="last_name">Apellidos</label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">local_post_office</i>
-            <input name="email"  id="email" type="email" class="autocomplete" required>
-            <label for="email">Email</label>
-           </div>
-          
-          <div class="input-field col s6">
-            <i class="material-icons prefix">vpn_key</i>
-            <input name="pasword"  id="password" type="password" class="autocomplete" required>
-            <label for="password">Password</label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">maps</i>
-            <input name="direccion"  id="address" type="text" class="autocomplete" required>
-            <label for="address">Direccion</label>
-          </div>            
-        </div>
-
-        <div class="row">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">phone</i>
-            <input name="telefono"  id="phone" type="text" class="autocomplete" required>
-            <label for="phone">Telefono</label>
-          </div>
-
-          <div class="input-field col s6">
-            <i class="material-icons prefix">phone_android</i>
-            <input name="celular"  id="cellphone" type="text" class="autocomplete" required>
-            <label for="cellphone">Celular</label>
-          </div>
-        </div>
-
-        <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">phone</i>
-              <input name="telefono"  id="phone" type="text" class="autocomplete">
-              <label for="phone">Telefono</label>
-            </div>
   
-            <div class="input-field col s6">
-              <i class="material-icons prefix">phone_iphone</i>
-              <input name="celular"  id="cellphone" type="text" class="autocomplete">
-              <label for="cellphone">Celular</label>
-            </div>
-          </div>
-
-        <div class="center">
-          <button class="btn waves-effect  red darken-4" type="submit" name="action">Registrarme
-            <i class="material-icons right">send</i>
-          </button>
-        </div> 
-                      
+    <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Example multiple select</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
       </form>
-    </div>
-  </div>      
 
-  <!--footer de la pagina-->
-  <footer class="page-footer  red darken-4" id="footer">               
-    <div class="container">                    
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Redes sociales </h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Face</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-copyright">
-      <div class="container center">
-        © 2019 Domicilios Entregapp
-      </div>
-    </div>
-  </footer>
-
-            
-    <!-- Compiled and minified JavaScript -->
-<script src="../static/vendor/materialize/js/materialize.min.js"></script>
-   
-<!--script init del modal-->
-<script>
-    M.AutoInit();
-</script>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <!--bootstrap js-->
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!--iconos del sitio-->
+    <script src="https://kit.fontawesome.com/4e0743667a.js"></script>
 </body>
 </html>
-

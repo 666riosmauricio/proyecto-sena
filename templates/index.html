@@ -1,70 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="../static/vendor/materialize/css/materialize.min.css">    
-    <link rel="stylesheet" href="/modal.js">
-    <title>Index</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--bootstrap misn.js-->
+  <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!--script modal login-->
+  <link rel="stylesheet" href="/modal.js">
+
+  <title>Index</title>
 </head>
 <body>
-
-        <nav>
-                <div class="nav-wrapper">
-                    <div class="container">
-                            <a href="../static/vendor/img/logoentregapp.jpg" class="brand-logo">Entregapp</a>
-                            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li ><a  onclick=""   class="modal-trigger" href="#modaluniversal" href="/">Iniciar Sesion</a></li>
-                            <!-- Modal Trigger -->
-                            <li><a class="" href="/registro">Registro</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-           
-        
-            <div class="section">
-                <!-- Modal Structure -->
-                <div id="modaluniversal" class="modal">
-                    <div class="modal-content">
-                        <i class="modal-close material-icons right">cancel</i>
-                        <form  id="logiarse"  action="" method="GET" class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                <i class="material-icons prefix">mail</i>
-                                <input oninput="escribiendo()" id="email" name="correo" type="email" class="validate">
-                                <label for="email">Correo electronico</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                <i class="material-icons prefix">https</i>
-                                <input oninput="escribiendo()" id="password" name="contraseña" type="password" class="validate">
-                                <label for="email">Contraseña</label>
-                                </div>
-                            </div>
-                            
-                            <div class="center">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Ingresar
-                                    <i class="material-icons right">send</i>
-                                  </button>
-                                </div>       
-                     </form>
-                    </div>
-                </div>
+  
+<!--Menu de navegacion-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Domicilios Entregapp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav ">            
+                <li class="nav-item">
+                    <a href="/login/">Inicio Sesion</a>
+                </li>
+                
+            <li class="nav-item">
+                    <a href="/registro/">Registrarse</a>
+            </li>
+                </ul>
             </div>
+    </nav>
 
-            
-    <!-- Compiled and minified JavaScript -->
-<script src="../static/vendor/materialize/js/materialize.min.js"></script>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     
-<script>
-    M.AutoInit();
-</script>
+    <!--bootstrap js-->
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!--iconos del sitio-->
+    <script src="https://kit.fontawesome.com/4e0743667a.js"></script>
+
+   <script>
+   </script>
 </body>
 </html>
-
