@@ -1,0 +1,119 @@
+/*cuerpo del documento*/
+html,body{
+    height: 100%;
+}
+
+/*cuerpo del documento*/
+body{
+    background: url('/static/vendor/img/background10.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*menu de navegacion*/
+#nav{
+    margin-bottom:200px; 
+    padding:15px;  
+}
+
+/*boton de devolver en el nav*/
+#atras{
+    margin-right:1100px;
+    color:white;
+    border:solid 2px white;
+     margin-top:10px;
+     width:100px;
+    }
+ 
+/*resaltado de boton de devolver del nav*/
+#atras:hover{
+    background: lightseagreen;
+    color: #fff !important;
+    }
+
+
+.footer a {
+    text-decoration:none;
+    color:white;
+}   
+
+#footer-main{
+    margin-top:350px;
+     background:#1f1f1f
+}
+#enlaces-footer{
+    text-decoration:none;color:white;
+}
+.nav-item a{
+    margin:15px; text-decoration:none; color:white;
+}
+
+#atras:hover{
+    background: lightseagreen;
+    color: #fff !important;
+}
+
+/*texto del body*/
+#login-texto{
+    margin-top:-70px;
+    margin-bottom:0px;
+    
+}
+
+#login-texto h1{
+    color:white;
+    text-align: center;
+}
+
+#login-texto hr{
+    background:white;
+}
+
+#login-texto small,h5{
+    color:white
+}
+
+/*seccion del login*/
+#seccion-principal{
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
+    height: 50px;
+}
+
+/*login*/
+.modal-content{
+background: white;
+padding: 0 20px;
+box-shadow: 0 0 3px #848484;
+margin-top:-275px;
+border-radius: 10px;
+opacity: .90;
+}
+
+/*imagen del login*/
+#img-login img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 3px #848484;
+    border-radius: 50%;
+    margin-bottom: 35px;
+    }
+    
+/*campos del formulario de login*/
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    padding-left: 54px;    
+    }
+
+/*boton de registrarse*/  
+#a-registro {
+    margin-top:10px;
+    margin-bottom: 40px;
+    
+}
+
+#a-registro a{
+    text-decoration:none;
+    color:white;
+}

@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../">
-  <title>Document</title>
+  <link rel="stylesheet" href="../static/vendor/bootstrap/css/loginusuario.css">
+  <title>Login Usuarios</title>
 </head>
 <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom:200px;">
-                <a class="navbar-brand fas fa-home" href="/" > Domicilios Entregapp</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,7 +20,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav ">            
                             <li class="nav-item">
-                                <button class="btn btn-ligth" id="atras" style="margin-right:150px;color:white;border:solid 2px white; margin-top:10px;width:100px;" type="reset">Atras</button>  
+                                <button class="btn btn-ligth fas fa-angle-double-left" id="atras"  type="reset"><a href="/">Atras</a></button>  
                             </li>
                             
                         
@@ -30,11 +29,26 @@
                 </nav>
 
 <!--formulario del login-->
+<div class="row">
+<div class="col-sm-1"></div>
+    <div class="col-sm-4 " id="login-texto">
+        <h1 class="" >Bienvenido</h1>
+        <hr >
+        <h5 >Nuestra aplicacion de domicilios a su servicio</h5>
+        <small >Desde esta herramienta podra llegar a multiples 
+            operaciones realizadas por nuestro sistema</small>
+        <br>
+        <small >Si usted es un nuevo usuario registrese en nuestra 
+            aplicacion para acceder a los servicios que ofrece Entregapp</small>
+    </div>
+    
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5" >
 <div class="modal-dialog text-center" >
         <div class="col-sm-8" id="seccion-principal">
             <div class="modal-content">
                 <div class="col-sm-12" id="img-login">
-                    <img src="../static/vendor/img/paquetes2.jpg" alt="">
+                    <img src="../static/vendor/img/logoentregapp.jpg" alt="">
                 </div>
                 
             
@@ -49,23 +63,25 @@
 
                 
 
-                <button type="submit" class="btn btn-info col-12" style="background:darkblue;" id="button"><i class="fas fa-sign-in-alt" > </i> Acceder</button>
-            
+                <button type="submit" class="btn btn-success col-12"  id="button"><i class="fas fa-sign-in-alt" > </i> Acceder</button>
+                <hr style="background:black;">
+
             </form>
-           
             <div class="fas-file-alt" id="a-registro">
 
-                <a class="fas fa-file-alt" href="/registro" > No estoy registrado</a>
-            </div>
+            <button class="btn btn-secondary col-sm-12"><a href="/registro/">Registrarse</a></button>
+                    </div>
            
            
             </div>
         </div>
     </div>
+</div>
 
-    <!--footer del login-->
-    <footer id="footer-main" style="margin-top:350px; background:#1f1f1f">
-            <div class="container" style="text-decoration:none;color:white;">
+</div>
+    <!--
+    <footer class="footer"   id="footer-main" >
+            <div class="container" id="enlaces-footer" >
                 <div class="row">
                     <div class="col-sm-3">
                         <p class="">Direccion</p>
@@ -80,10 +96,10 @@
                         </ul>
                     </div>
                     
-                    <div class="col-sm-4" >
-                        <ul class="list-unstyled">
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled" >
                             <h5>Contactenos</h5>
-                            <li class="fab fa-facebook "> <a href="" style="text-decoration:none;color:white;"> facebook</a></li>
+                            <li class="fab fa-facebook "> <a href="" > facebook</a></li>
                             <br>
     
                             <li class="fab fa-twitter-square "> <a href=""> twitter</a></li>
@@ -106,72 +122,10 @@
                 </div>
             </div>
         </footer>
-        
+    -->
 
-   <style>
 
-    .nav-item a{
-        margin:15px; text-decoration:none; color:white;
-    }
-
-    #atras:hover{
-        background: blue;
-        color: #fff !important;
-    }
-    #a-registro a{
-        margin-top:20px;
-        margin-bottom: 10px;
-         text-decoration:none;
-         color:white;
-    }
    
-
-   /*login*/
-    .modal-content{
-    background: black;
-    padding: 0 20px;
-    box-shadow: 0 0 3px #848484;
-    margin-top:-60px;
-    border-radius: 20px;
-    opacity: .80;
-}
-
-    
-/*seccion del login*/
-#seccion-principal{
-    margin: 0 auto;
-    margin-top: 25%;
-    padding: 0;
-    height: 50px;
-}
-
-/*imagen del login*/
-#img-login img{
-    width: 100px;
-    height: 100px;
-    box-shadow: 0 0 3px #848484;
-    border-radius: 50%;
-    margin-top: -40px;
-    margin-bottom: 35px;
-}
-
-#login-tittle{
-    margin-top:-25px;
-    margin-bottom: 20px;
-    background: darkolivegreen;
-}
-
-/*campos del formulario de login*/
-.form-group input{
-    height: 42px;
-    font-size: 18px;
-    padding-left: 54px;
-    border-radius: 100px;
-    
- }
-
-
-   </style>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
