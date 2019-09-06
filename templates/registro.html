@@ -5,41 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../">
+  <link rel="stylesheet" href="../static/vendor/bootstrap/css/registrousuarios.css">
   <title>Document</title>
 </head>
 <body>
   
-    <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Example multiple select</label>
-          <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-      </form>
+    <div class="col-sm-2" id="btn-atras">
+        <button class="btn btn-ligth fas fa-angle-double-left" id="atras"><a href="/"></a></button>  
+    </div>
+
+    <!--formulario del login-->
+<div class="row">
+  <div class="col-sm-1"></div>
+      <div class="col-sm-4 " id="registro-texto">
+          <h1 class="" >Bienvenido</h1>
+          <hr >
+          <h5 >Nuestra aplicacion de domicilios a su servicio</h5>
+          <small >Desde esta herramienta podra llegar a utilizar multiples 
+              operaciones realizadas por nuestro sistema</small>
+          <br>
+          <small >Si usted es un nuevo usuario registrese en nuestra 
+              aplicacion para acceder a los servicios que ofrece Entregapp</small>
+      </div>
+      <div class="col-sm-1"></div>
+
+                  <div class="col-sm-5" id="form-reg">
+                  
+                  
+              
+              <form action="" method="post"  id="form-registro">
+                <div class="row">
+                  <div class="form-group col-sm-12" >
+                      <label for="" class="fas fa-sort-numeric-up"> Numero Documento</label>
+                      <input type="text" class="form-control"  name="numeroDocumento" placeholder="Ingrese numero documento" id="documentnumber" required>    
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label for="" class="fas fa-user"> Nombre</label>
+                      <input type="text" class="form-control" name="nombre" placeholder="Ingrese nombre" id="name" required>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label for="" class="fas fa-id-badge"> Apellido</label>
+                      <input type="text" class="form-control" name="apellidos" placeholder="Ingrese apellido" id="last name" required>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                      <label for=""class="fas fa-envelope-square"> Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese email" id="email" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label for="" class="fas fa-unlock-alt"> Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Ingrese password" id="password" required>
+                    </div>
+                  </div>
+                <div class="row">
+                    <div class="form-group col-sm-12" >
+                        <label for="" class="fas fa-map-marked-alt"> Direccion</label>
+                        <input type="text" class="form-control "  name="direccion" placeholder="Ingrese direccion" id="address" required>    
+                    </div>
+                  </div>
+                  
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                          <label for="" class="fas fa-phone-alt"> Telefono</label>
+                            <input type="text" class="form-control" name="telefono" placeholder="Ingrese Telefono" id="telephone" required>
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <label for="" class="fas fa-mobile-alt"> Celular</label>
+                            <input type="text" class="form-control" name="celular" placeholder="Ingrese celular" id="cellphone" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-sm-6">
+                            <label for=""class="fas fa-phone-alt"> Telefono 2</label>
+                              <input type="text" class="form-control" name="telefono2" placeholder="opcional" id="telephonetwo" >
+                          </div>
+                          <div class="form-group col-sm-6">
+                            <label for="" class="fas fa-mobile-alt"> Celular 2</label>
+                              <input type="text" class="form-control" name="celular2" placeholder="opcional" id="cellphonetwo">
+                          </div>
+                        </div>
+                        <hr style="background:black;">
+
+                  <button type="submit" class="btn btn-success col-12"  id="button"><i class="fas fa-sign-in-alt" > </i> Registrame</button>
+  
+              </form>
+              <div class="fas-file-alt" id="a-registro">
+  
+                      </div>
+             
+             
+                    </div>
+  
+  
+  </div>
+  
+
 
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

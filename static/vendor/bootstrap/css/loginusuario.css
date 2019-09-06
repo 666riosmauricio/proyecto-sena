@@ -1,6 +1,7 @@
 /*cuerpo del documento*/
 html,body{
     height: 100%;
+
 }
 
 /*cuerpo del documento*/
@@ -9,19 +10,12 @@ body{
     background-size: cover;
 }
 
-/*menu de navegacion*/
-#nav{
-    margin-bottom:200px; 
-    padding:15px;  
-}
 
 /*boton de devolver en el nav*/
 #atras{
-    margin-right:1100px;
     color:white;
     border:solid 2px white;
-     margin-top:10px;
-     width:100px;
+    margin-top:10px;
     }
  
 /*resaltado de boton de devolver del nav*/
@@ -38,13 +32,14 @@ body{
 
 #footer-main{
     margin-top:350px;
-     background:#1f1f1f
+     background:#1f1f1f;
 }
 #enlaces-footer{
     text-decoration:none;color:white;
 }
-.nav-item a{
-    margin:15px; text-decoration:none; color:white;
+#btn-atras a{
+    margin:15px; text-decoration:none;
+     color:white;
 }
 
 #atras:hover{
@@ -54,8 +49,8 @@ body{
 
 /*texto del body*/
 #login-texto{
-    margin-top:-70px;
-    margin-bottom:0px;
+    margin-top:90px;
+    margin-bottom: 80px;
     
 }
 
@@ -85,9 +80,10 @@ body{
 background: white;
 padding: 0 20px;
 box-shadow: 0 0 3px #848484;
-margin-top:-275px;
+margin-top:-90px;
 border-radius: 10px;
 opacity: .90;
+margin-bottom:30px;
 }
 
 /*imagen del login*/
@@ -113,6 +109,7 @@ opacity: .90;
     
 }
 
+/*enlace de boton de registrarse*/
 #a-registro a{
     text-decoration:none;
     color:white;

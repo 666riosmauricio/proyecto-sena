@@ -1,0 +1,28 @@
+/*cuerpo del documento*/
+html,body{
+    height: 100%;
+
+}
+
+/*cuerpo del documento*/
+body{
+    background: url('/static/vendor/img/background10.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+#atras{
+    color:white;
+    border:solid 2px white;
+    margin-top:10px;
+    }
+ 
+/*resaltado de boton de devolver del nav*/
+#atras:hover{
+    background: lightseagreen;
+    color: #fff !important;
+    }
+
+    #btn-atras a{
+        margin:15px; text-decoration:none;
+         color:white;
+    }
+    
