@@ -6,8 +6,11 @@ html,body{
 
 /*cuerpo del documento*/
 body{
-    background: url('/static/vendor/img/background10.jpg') no-repeat center center fixed;
+    background: url('/static/vendor/img/background10.jpg');
     background-size: cover;
+    height: 40%;
+    width: 90%
+    
 }
 #atras{
     color:white;
@@ -26,3 +29,30 @@ body{
          color:white;
     }
     
+/*texto del body*/
+#registro-texto{
+    margin-top:90px;
+    margin-bottom: 80px;
+    
+}
+
+#registro-texto h1{
+    color:white;
+    text-align: center;
+}
+
+#registro-texto hr{
+    background:white;
+}
+
+#registro-texto small,h5{
+    color:white
+}
+
+/*seccion del login*/
+#seccion-principal{
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
+    height: 50px;
+}

@@ -25,18 +25,7 @@ body{
     }
 
 
-.footer a {
-    text-decoration:none;
-    color:white;
-}   
 
-#footer-main{
-    margin-top:350px;
-     background:#1f1f1f;
-}
-#enlaces-footer{
-    text-decoration:none;color:white;
-}
 #btn-atras a{
     margin:15px; text-decoration:none;
      color:white;
