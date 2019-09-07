@@ -1,7 +1,6 @@
 /*cuerpo del documento*/
 html,body{
     height: 100%;
-
 }
 
 /*cuerpo del documento*/
@@ -9,50 +8,67 @@ body{
     background: url('/static/vendor/img/background10.jpg');
     background-size: cover;
     height: 40%;
-    width: 90%
-    
+    width: 90%    
 }
+
+/*Boton atras*/
 #atras{
     color:white;
     border:solid 2px white;
     margin-top:10px;
-    }
+}
  
-/*resaltado de boton de devolver del nav*/
+/*boton atras*/
 #atras:hover{
     background: lightseagreen;
     color: #fff !important;
-    }
+}
 
-    #btn-atras a{
-        margin:15px; text-decoration:none;
-         color:white;
-    }
+/*Enlace boton atras*/
+#btn-atras a{
+    margin:15px; text-decoration:none;
+    color:white;
+}
     
 /*texto del body*/
 #registro-texto{
     margin-top:90px;
-    margin-bottom: 80px;
-    
+    margin-bottom: 80px;   
 }
 
+/*texto del body*/
 #registro-texto h1{
     color:white;
     text-align: center;
 }
 
+/*texto del body*/
 #registro-texto hr{
     background:white;
 }
 
+/*texto del body*/
 #registro-texto small,h5{
     color:white
 }
 
-/*seccion del login*/
-#seccion-principal{
-    margin: 0 auto;
-    margin-top: 25%;
-    padding: 0;
-    height: 50px;
+/*Titulo formulario*/
+#h1-r{
+    margin-top:5px;
+    margin-bottom:20px;
 }
+
+/*formulario registro*/
+#form-reg{
+    background: white;
+    padding: 0 20px;
+    box-shadow: 0 0 3px #848484;
+    border-radius: 10px;
+    opacity: .90;
+    margin-bottom:30px;
+}
+
+/*Boton registrarse*/
+#button{
+       margin-bottom:20px;
+   }

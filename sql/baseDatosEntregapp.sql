@@ -11,8 +11,10 @@ create table usuarios (
     direccion varchar(50) not null,
     telefono varchar(10) not null,
     celular varchar(10) not null,
-    telefono2 varchar(10) not null,
-    celular2 varchar(10) not null
+    telefono2 varchar(10) null,
+    celular2 varchar(10) null
+    
+    
 );
 
 create table empleados (
@@ -24,8 +26,8 @@ create table empleados (
     direccion varchar(50) not null,
     telefono varchar(10) not null,
     celular varchar(10) not null,
-    telefono2 varchar(10) not null,
-    celular2 varchar(10) not null,
+    telefono2 varchar(10) null,
+    celular2 varchar(10) null,
     fechaNacimiento date not null
 );
 
@@ -48,8 +50,7 @@ create table paquetes (
     empleadoPaquete varchar(10) not null,
     foreign key (empleadoPaquete) references empleados(numeroDocumento)
     
-    on delete no action
-    on update no action
+    
 );
 
 create table documentos (
@@ -71,8 +72,7 @@ create table documentos (
     empleadoDocumento varchar(10) not null,
     foreign key (empleadoDocumento) references empleados(numeroDocumento)
     
-    on delete no action
-    on update no action
+
 );
 
 create table compras (
@@ -90,8 +90,7 @@ create table compras (
     empleadoCompras varchar(10) not null,
     foreign key (empleadoCompras) references empleados(numeroDocumento)
     
-    on delete no action
-    on update no action
+    
     
 );
  create table pagos (
@@ -103,16 +102,13 @@ create table compras (
     usuarioPago varchar(50) not null,
     foreign key (usuarioPago) references usuarios (numeroDocumento)
     
-    on delete no action
-    on update no action
+   
  );
  
 create table pagosUsuarios (
 	idPagoUsuario int not null primary key auto_increment,
     usuarioPago varchar(50) not null,
     foreign key (usuarioPago) references usuarios (numeroDocumento)
-    
-    on delete no action 
-    on update no action
+
 
 );

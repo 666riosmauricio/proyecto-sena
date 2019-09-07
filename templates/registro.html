@@ -1,105 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--Bootstrap min.css-->
   <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!--Hoja de estilos de registro de usuarios-->
   <link rel="stylesheet" href="../static/vendor/bootstrap/css/registrousuarios.css">
-  <title>Document</title>
+  <title>Registro de usuarios</title>
+
 </head>
+
 <body>
   
-    <div class="col-sm-2" id="btn-atras">
-        <button class="btn btn-ligth fas fa-angle-double-left" id="atras"><a href="/">Atras</a></button>  
-    </div>
+  <!--Boton atras-->
+  <div class="col-sm-2" id="btn-atras">
+    <button class="btn btn-ligth fas fa-angle-double-left" id="atras">
+      <a href="/">Atras</a>
+    </button>  
+  </div>
 
-    <!--formulario del login-->
-<div class="row">
-  <div class="col-sm-1"></div>
+  <!--texto de registro de usuarios-->
+  <div class="row">
+    <div class="col-sm-1"></div>
       <div class="col-sm-4 " id="registro-texto">
-          <h1 class="" >Bienvenido</h1>
-          <hr >
-          <h5 >Nuestra aplicacion de domicilios a su servicio</h5>
-          <small >Desde esta herramienta podra llegar a utilizar multiples 
-              operaciones realizadas por nuestro sistema</small>
+        <h1 class="" >Registrarse</h1>
+          <hr>
+          <h5 >
+            Nuestra aplicacion de domicilios a su servicio
+          </h5>
+          <small>
+            Haga parte de nuestra aplicacion y acceda a los diferentes servicios
+            que Entregapp ofrece para usted 
+            </small>
           <br>
-          <small >Si usted es un nuevo usuario registrese en nuestra 
-              aplicacion para acceder a los servicios que ofrece Entregapp</small>
+          <small>
+            Estamos al servicio de nuestros usuarios generando confianza y agilidad
+          </small>
       </div>
-      <div class="col-sm-1"></div>
 
-                  <div class="col-sm-5" id="form-reg">
-                  
-                  
-              
-              <form action="" method="post"  id="form-registro">
-                <div class="row">
-                  <div class="form-group col-sm-12" >
-                      <label for="" class="fas fa-sort-numeric-up"> Numero Documento</label>
-                      <input type="text" class="form-control"  name="numeroDocumento" placeholder="Ingrese numero documento" id="documentnumber" required>    
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group col-sm-6">
-                    <label for="" class="fas fa-user"> Nombre</label>
-                      <input type="text" class="form-control" name="nombre" placeholder="Ingrese nombre" id="name" required>
-                  </div>
-                  <div class="form-group col-sm-6">
-                    <label for="" class="fas fa-id-badge"> Apellido</label>
-                      <input type="text" class="form-control" name="apellidos" placeholder="Ingrese apellido" id="last name" required>
-                  </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-sm-6">
-                      <label for=""class="fas fa-envelope-square"> Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Ingrese email" id="email" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                      <label for="" class="fas fa-unlock-alt"> Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Ingrese password" id="password" required>
-                    </div>
-                  </div>
-                <div class="row">
-                    <div class="form-group col-sm-12" >
-                        <label for="" class="fas fa-map-marked-alt"> Direccion</label>
-                        <input type="text" class="form-control "  name="direccion" placeholder="Ingrese direccion" id="address" required>    
-                    </div>
-                  </div>
-                  
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                          <label for="" class="fas fa-phone-alt"> Telefono</label>
-                            <input type="text" class="form-control" name="telefono" placeholder="Ingrese Telefono" id="telephone" required>
-                        </div>
-                        <div class="form-group col-sm-6">
-                          <label for="" class="fas fa-mobile-alt"> Celular</label>
-                            <input type="text" class="form-control" name="celular" placeholder="Ingrese celular" id="cellphone" required>
-                        </div>
-                      </div>
-                      <div class="row">
-                          <div class="form-group col-sm-6">
-                            <label for=""class="fas fa-phone-alt"> Telefono 2</label>
-                              <input type="text" class="form-control" name="telefono2" placeholder="opcional" id="telephonetwo" >
-                          </div>
-                          <div class="form-group col-sm-6">
-                            <label for="" class="fas fa-mobile-alt"> Celular 2</label>
-                              <input type="text" class="form-control" name="celular2" placeholder="opcional" id="cellphonetwo">
-                          </div>
-                        </div>
-                        <hr style="background:black;">
+    <div class="col-sm-1"></div>
+    
+    <!--Formulario de registro de usuarios-->
+    <div class="col-sm-5" id="form-reg">              
+      <form action="" method="post"  id="form-registro">
+        <div class="col-sm-12" id="h1-r">
+          <h1 class="text-center">Registro usuarios</h1>
+        </div>
+               
+        <div class="row" >
+          <div class="form-group col-sm-12" >
+            <label for="" class="fas fa-sort-numeric-up"> Numero Documento</label>
+            <input type="text" class="form-control"  name="numeroDocumento" placeholder="Numero documento" id="documentnumber" required>    
+          </div>
+        </div>
 
-                  <button type="submit" class="btn btn-success col-12"  id="button"><i class="fas fa-sign-in-alt" > </i> Registrame</button>
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="" class="fas fa-user"> Nombre</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre" id="name" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="" class="fas fa-id-badge"> Apellido</label>
+            <input type="text" class="form-control" name="apellidos" placeholder="Apellido" id="last name" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for=""class="fas fa-envelope-square"> Email</label>
+            <input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="" class="fas fa-unlock-alt"> Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password" id="password" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-12" >
+            <label for="" class="fas fa-map-marked-alt"> Direccion</label>
+            <input type="text" class="form-control "  name="direccion" placeholder="Direccion" id="address" required>    
+          </div>
+        </div>
+                  
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="" class="fas fa-phone-alt"> Telefono</label>
+            <input type="text" class="form-control" name="telefono" placeholder="Telefono" id="telephone" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="" class="fas fa-mobile-alt"> Celular</label>
+            <input type="text" class="form-control" name="celular" placeholder="Celular" id="cellphone" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for=""class="fas fa-phone-alt"> Telefono 2</label>
+            <input type="text" class="form-control" name="telefono2" placeholder="Opcional" id="telephonetwo" >
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="" class="fas fa-mobile-alt"> Celular 2</label>
+            <input type="text" class="form-control" name="celular2" placeholder="Opcional" id="cellphonetwo">
+          </div>
+          </div>
+
+        <hr style="background:black;">
+
+        <button type="submit" class="btn btn-success col-12"  id="button">
+          <i class="fas fa-sign-in-alt" > </i> Registrame
+        </button>
   
-              </form>
-              <div class="fas-file-alt" id="a-registro">
-  
-                      </div>
-             
-             
-                    </div>
-  
-  
+      </form>               
+      </div>  
   </div>
   
 
@@ -108,7 +126,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     
-    <!--bootstrap js-->
+    <!--bootstrap min.js-->
     <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
     
     <!--iconos del sitio-->

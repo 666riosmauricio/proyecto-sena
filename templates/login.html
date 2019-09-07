@@ -1,123 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--bootstrap min.css-->
   <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!--Hoja de estilos de login-->
   <link rel="stylesheet" href="../static/vendor/bootstrap/css/loginusuario.css">
+  
   <title>Login Usuarios</title>
+
 </head>
+
 <body>
 
-        <div class="col-sm-2" id="btn-atras">
-    <button class="btn btn-ligth fas fa-angle-double-left" id="atras"  type="reset"><a href="/">Atras</a></button>  
-</div>
+    <!--Boton atras-->
+    <div class="col-sm-2" id="btn-atras">
+        <button class="btn btn-ligth fas fa-angle-double-left" id="atras"  type="reset">
+            <a href="/">Atras</a>
+        </button>  
+    </div>
 
-<!--formulario del login-->
-<div class="row">
-<div class="col-sm-1"></div>
+<!--Texto del login-->
+    <div class="row">
+    <div class="col-sm-1"></div>
     <div class="col-sm-4 " id="login-texto">
         <h1 class="" >Bienvenido</h1>
         <hr >
-        <h5 >Nuestra aplicacion de domicilios a su servicio</h5>
-        <small >Desde esta herramienta podra llegar a utilizar multiples 
-            operaciones realizadas por nuestro sistema</small>
+        <h5 >
+            Nuestra aplicacion de domicilios a su servicio
+        </h5>
+        <small>
+            Desde esta herramienta podra llegar a utilizar multiples 
+            operaciones realizadas por nuestro sistema
+        </small>
         <br>
-        <small >Si usted es un nuevo usuario registrese en nuestra 
-            aplicacion para acceder a los servicios que ofrece Entregapp</small>
+        <small>
+            Si usted es un nuevo usuario registrese en nuestra 
+            aplicacion para acceder a los servicios que ofrece Entregapp
+        </small>
     </div>
     
     <div class="col-sm-1"></div>
     <div class="col-sm-6" >
-<div class="modal-dialog text-center" >
-        <div class="col-sm-8" id="seccion-principal">
-            <div class="modal-content">
-                <div class="col-sm-12" id="img-login">
-                    <img src="../static/vendor/img/logoentregapp.jpg" alt="">
-                </div>
-                
+        <div class="modal-dialog text-center" >
+            <div class="col-sm-8" id="seccion-principal">
+                <div class="modal-content">
+                    <div class="col-sm-12" id="img-login">
+                        <img src="../static/vendor/img/logoentregapp.jpg" alt="">
+                    </div>               
             
-            <form action="/login/" method="post"  id="form-login">
-                <div class="form-group" >
-                    <input type="email" class="form-control fas fa-user"  name="correo" placeholder="Email" id="name" required>    
-                </div>
+                    <form action="/login/" method="post"  id="form-login">
+                        <div class="form-group" >
+                            <input type="email" class="form-control fas fa-user"  name="correo" placeholder="Email" id="name" required>    
+                        </div>
 
-                <div class="form-group">
-                    <input type="password" class="form-control fas fa-lock" name="contraseña" placeholder="Password" id="contraseña" required>
-                </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control fas fa-lock" name="contraseña" placeholder="Password" id="contraseña" required>
+                        </div>                
 
-                
+                        <button type="submit" class="btn btn-success col-12"  id="button">
+                            <i class="fas fa-sign-in-alt" ></i> Acceder
+                        </button>
 
-                <button type="submit" class="btn btn-success col-12"  id="button"><i class="fas fa-sign-in-alt" > </i> Acceder</button>
-                <hr style="background:black;">
+                        <hr style="background:black;">
 
-            </form>
-            <div class="fas-file-alt" id="a-registro">
+                    </form>
 
-            <button class="btn btn-secondary col-sm-12"><a href="/registro/">Registrarse</a></button>
+                        <div class="fas-file-alt" id="a-registro">
+
+                        <button class="btn btn-secondary col-sm-12">
+                            <a href="/registro/">Registrarse</a>
+                        </button>
                     </div>
            
            
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-</div>
-    <!--
-    <footer class="footer"   id="footer-main" >
-            <div class="container" id="enlaces-footer" >
-                <div class="row">
-                    <div class="col-sm-3">
-                        <p class="">Direccion</p>
-                        <p class="">Armenia-Quindio</p>
-                        <p class="">Equipo Entregapp</p>    
-                    </div>
+    </div>
     
-                    <div class="col-sm-3">
-                        <ul class="list-unstyled">
-                        <p class="">Servicio 24 horas</p>
-                        <p class="">Entregapp@gmail.com</p>    
-                        </ul>
-                    </div>
-                    
-                    <div class="col-sm-4">
-                        <ul class="list-unstyled" >
-                            <h5>Contactenos</h5>
-                            <li class="fab fa-facebook "> <a href="" > facebook</a></li>
-                            <br>
-    
-                            <li class="fab fa-twitter-square "> <a href=""> twitter</a></li>
-                            <br>
-    
-                            <li class="fab fa-youtube-square "><a href=""> youtube</a></li>
-                            <br>
-                            
-                            <li class="fab fa-instagram "><a href=""> Instagram</a></li>
-                        
-                        </ul>
-                    </div>
-    
-                    <div class="col-sm-2">
-                        <h6>Mas informacion</h6>
-                        <p>Entregapp@gmail.com</p>
-                        <p>3166848351</p>
-                    </div>
-    
-                </div>
-            </div>
-        </footer>
-    -->
-
-
-   
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    
-<!--bootstrap js-->
+<!--bootstrap min.js-->
 <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
    
 <!--iconos del sitio-->
