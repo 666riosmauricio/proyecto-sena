@@ -89,7 +89,41 @@ def login():
 #login de empleados y administrador
 @app.route('/loginEmpleado/', methods = ['GET','POST'])
 def loginEmpleado():
-  
+  if request.method == 'POST':
+    #se recuperan datos del formulario
+    usuario = request.form['email']
+    password = request.form['password']
+    #conexion a la base de datos
+    conn = pymysql.connect(
+    host="localhost", port=3306, user="root",
+    passwd ="", db="Entregapp" )
+    cursor = conn.cursor()
+    cursor.execute("SELECT password,email FROM empleados WHERE email=%s", (usuario))
+    resultado = cursor.fetchone()
+    conn.close()
+    
+    #si el usuario no existe..
+    if resultado is None:
+      flash('El usuario no esta registrado!! Por favor registrese')
+      return  redirect(url_for('index'))
+         
+    #si el password coincide con el del usuario...
+    if password == resultado[0]:
+      #se crea la sesion del usuario
+      session['usuario'] = usuario
+
+      if resultado[1]=="maurobetarios@gmail.com":
+        flash('Bienvenido Administrador a domicilios Entregapp')
+        return render_template('indexAdmin.html',nombres = usuario)
+
+      #si el correo corresponde a un usurio    
+      flash('Bienvenido ' + usuario + ', a Domicilios Entregapp')
+      return render_template('indexUsuario.html',nombres = usuario)  
+
+      #si la contraseña es incorrecta  
+    else:
+      flash('usuario o contraseña incorrecta')
+      return redirect(url_for('index'))
   return render_template('loginEmpleado.html')
 
 @app.route('/registroEmpleado/', methods = ['GET','POST'])
@@ -106,20 +140,19 @@ def registroEmpleado():
     Telefono2 = request.form['telefono2']
     Celular2 = request.form['celular2']
     FechaNacimiento = request.form['fechaNacimiento']
-    Role = request.form['role']
 
     #conexion a la base de datos
     conn = pymysql.connect(
     host="localhost", port=3306, user="root",
     passwd="", db="entregapp")
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO empleados (numeroDocumento,nombres,apellidos,email,password,direccion,telefono,celular,telefono2,celular2,fechaNacimiento,role) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
-    NumeroDocumento,Nombres,Apellidos,Email,Contraseña,Direccion,Telefono,Celular,Telefono2,Celular2,FechaNacimiento,Role))
+    cursor.execute("INSERT INTO empleados (numeroDocumento,nombres,apellidos,email,password,direccion,telefono,celular,telefono2,celular2,fechaNacimiento) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
+    NumeroDocumento,Nombres,Apellidos,Email,Contraseña,Direccion,Telefono,Celular,Telefono2,Celular2,FechaNacimiento))
     conn.commit()
     conn.close()
     flash('mensaje exitoso')
 
-    return redirect(url_for('LoginEmpleado')) 
+    return redirect(url_for('registroEmpleado')) 
   return render_template('registroEmpleado.html')
 
 if __name__ == '__main__':

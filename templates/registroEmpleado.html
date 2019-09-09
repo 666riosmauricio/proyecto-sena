@@ -11,7 +11,7 @@
 
   <!--Hoja de estilos de registro de usuarios-->
   <link rel="stylesheet" href="../static/vendor/bootstrap/css/registrousuarios.css">
-  <title>Registro de usuarios</title>
+  <title>Registro de empleados</title>
 
 </head>
 
@@ -28,18 +28,19 @@
   <div class="row">
     <div class="col-sm-1"></div>
       <div class="col-sm-4 " id="registro-texto">
-        <h1 class="" >Registrarse</h1>
+        <h1 class="" >Registrar empleado</h1>
           <hr>
           <h5 >
-            Nuestra aplicacion de domicilios a su servicio
+            Bienvenido
           </h5>
           <small>
-            Haga parte de nuestra aplicacion y acceda a los diferentes servicios
-            que Entregapp ofrece para usted 
+            Desde aqui usted podra registrar los empleados que haran parte de la aplicacion
+            de domicilios Entregapp
             </small>
           <br>
           <small>
             Estamos al servicio de nuestros usuarios generando confianza y agilidad
+            contando con pesonal calificado que estan al servicio de las personas 
           </small>
       </div>
 
@@ -49,7 +50,7 @@
     <div class="col-sm-5" id="form-reg">              
       <form action="" method="post"  id="form-registro">
         <div class="col-sm-12" id="h1-r">
-          <h1 class="text-center">Registro usuarios</h1>
+          <h1 class="text-center">Registro Empleados</h1>
         </div>
                
         <div class="row" >
@@ -91,7 +92,7 @@
         <div class="row">
           <div class="form-group col-sm-6">
             <label for="" class="fas fa-phone-alt"> Telefono</label>
-            <input type="text" class="form-control" name="telefono" placeholder="Opcional" id="telephone" >
+            <input type="text" class="form-control" name="telefono" placeholder="Opcional" id="telephone">
           </div>
           <div class="form-group col-sm-6">
             <label for="" class="fas fa-mobile-alt"> Celular</label>
@@ -109,6 +110,14 @@
             <input type="text" class="form-control" name="celular2" placeholder="Opcional" id="cellphonetwo">
           </div>
           </div>
+
+          <div class="row">
+              <div class="form-group col-sm-12" >
+                <label for="" class="fas fa-calendar-week"> Fecha Nacimiento</label>
+                <input type="date" class="form-control "  name="fechaNacimiento" placeholder="FechaNacimiento" id="date" required>    
+              </div>
+              
+            </div>
 
         <hr style="background:black;">
 

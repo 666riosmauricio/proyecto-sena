@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--bootstrap min.css-->
+  <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!--Hoja de estilos de login-->
+  <link rel="stylesheet" href="../static/vendor/bootstrap/css/loginusuario.css">
+  
+  <title>Login Empleados</title>
+
+</head>
+
+<body>
+
+    <!--Boton atras-->
+    <div class="col-sm-2" id="btn-atras">
+        <button class="btn btn-ligth fas fa-angle-double-left" id="atras"  type="reset">
+            <a href="/">Atras</a>
+        </button>  
+    </div>
+
+<!--Texto del login-->
+    <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4 " id="login-texto">
+        <h1 class="" >Bienvenido Empleado</h1>
+        <hr >
+        <h5 >
+            Accede a la informacion de nuestros servicios
+        </h5>
+        <small>
+            Acceda a la aplicacion para conocer la informacion de 
+            los pedidos que tiene asignados 
+        </small>
+        <br>
+        <small>
+            Le agradecemos por hacer parte de los empleados de esta aplicacion y esperamos 
+            que este a gusto con su labor
+        </small>
+    </div>
+    
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6" >
+        <div class="modal-dialog text-center" >
+            <div class="col-sm-8" id="seccion-principal">
+                <div class="modal-content">
+                    <div class="col-sm-12" id="img-login">
+                        <img src="../static/vendor/img/logoentregapp.jpg" alt="">
+
+                    </div>               
+                    <form action="/loginEmpleado/" method="post"  id="form-login">
+                        <div class="form-group" >
+                            <input type="email" class="form-control fas fa-user"  name="email" placeholder="Email" id="name" required>    
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control fas fa-lock" name="password" placeholder="Password" id="contraseña" required>
+                        </div>                
+
+                        <button type="submit" class="btn btn-success col-12"  id="button">
+                            <i class="fas fa-sign-in-alt" ></i> Acceder
+                        </button>
+
+                        <hr style="background:black;">
+
+                    </form>
+
+                        <div class="fas-file-alt" id="a-registro">
+
+                        <button class="btn btn-secondary col-sm-12">
+                            <a href="/registroEmpleado/">Registrarse</a>
+                        </button>
+                    </div>
+           
+           
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   
+<!--bootstrap min.js-->
+<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+   
+<!--iconos del sitio-->
+<script src="https://kit.fontawesome.com/4e0743667a.js"></script>
+</body>
+</html>
