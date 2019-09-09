@@ -17,9 +17,10 @@ def index():
     #sesion del usuario
     if 'usuario' in session:   
         usuario = session['usuario']
-        return render_template('index.html')
+        return render_template('index.html', nombres = usuario)
     return render_template('index.html')
 
+#Registro de usuario
 @app.route('/registro/',methods = ['GET','POST'])
 def registro():
   
@@ -76,7 +77,7 @@ def login():
 
       #si el correo corresponde a un usurio    
       flash('Bienvenido ' + usuario + ', a Domicilios Entregapp')
-      return render_template('indexUsuario.html',nombres = usuario)  
+      return render_template('indexAdmin.html',nombres = usuario)  
 
       #si la contraseña es incorrecta  
     else:
