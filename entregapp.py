@@ -77,7 +77,7 @@ def login():
 
       #si el correo corresponde a un usurio    
       flash('Bienvenido ' + usuario + ', a Domicilios Entregapp')
-      return render_template('indexAdmin.html',nombres = usuario)  
+      return render_template('indexUsuario.html',nombres = usuario)  
 
       #si la contraseña es incorrecta  
     else:
@@ -86,13 +86,41 @@ def login():
 
   return render_template('login.html')
 
+#login de empleados y administrador
+@app.route('/loginEmpleado/', methods = ['GET','POST'])
+def loginEmpleado():
+  
+  return render_template('loginEmpleado.html')
 
+@app.route('/registroEmpleado/', methods = ['GET','POST'])
+def registroEmpleado():
+  if request.method == 'POST':
+    NumeroDocumento= request.form['numeroDocumento']
+    Nombres = request.form['nombre']
+    Apellidos = request.form['apellidos']
+    Email = request.form['email']
+    Contraseña = request.form['password']
+    Direccion = request.form['direccion']
+    Telefono = request.form['telefono']
+    Celular = request.form['celular']
+    Telefono2 = request.form['telefono2']
+    Celular2 = request.form['celular2']
+    FechaNacimiento = request.form['fechaNacimiento']
+    Role = request.form['role']
+
+    #conexion a la base de datos
+    conn = pymysql.connect(
+    host="localhost", port=3306, user="root",
+    passwd="", db="entregapp")
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO empleados (numeroDocumento,nombres,apellidos,email,password,direccion,telefono,celular,telefono2,celular2,fechaNacimiento,role) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
+    NumeroDocumento,Nombres,Apellidos,Email,Contraseña,Direccion,Telefono,Celular,Telefono2,Celular2,FechaNacimiento,Role))
+    conn.commit()
+    conn.close()
+    flash('mensaje exitoso')
+
+    return redirect(url_for('LoginEmpleado')) 
+  return render_template('registroEmpleado.html')
 
 if __name__ == '__main__':
    app.run(debug = True)
-
-   """
-contraseña = 'perra'
-h = hashlib.md5 (contraseña.encode ())
-print (h.hexdigest ())
-   """
