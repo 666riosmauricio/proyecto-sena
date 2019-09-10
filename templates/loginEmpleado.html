@@ -18,6 +18,23 @@
 
 <body>
 
+    
+    <!--mensaje de flash-->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        {{message}}
+        </div></div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    {% block body %}{% endblock %}
+
     <!--Boton atras-->
     <div class="col-sm-2" id="btn-atras">
         <button class="btn btn-ligth fas fa-angle-double-left" id="atras"  type="reset">
@@ -63,19 +80,18 @@
                             <input type="password" class="form-control fas fa-lock" name="password" placeholder="Password" id="contraseña" required>
                         </div>                
 
+                        <hr style="background:black;">
+
+
                         <button type="submit" class="btn btn-success col-12"  id="button">
-                            <i class="fas fa-sign-in-alt" ></i> Acceder
+                            <i class="fas fa-paper-plane" ></i> Acceder
                         </button>
 
                         <hr style="background:black;">
 
                     </form>
 
-                        <div class="fas-file-alt" id="a-registro">
-
-                        <button class="btn btn-secondary col-sm-12">
-                            <a href="/registroEmpleado/">Registrarse</a>
-                        </button>
+                        
                     </div>
            
            

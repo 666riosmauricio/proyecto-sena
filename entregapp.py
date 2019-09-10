@@ -104,8 +104,8 @@ def loginEmpleado():
     
     #si el usuario no existe..
     if resultado is None:
-      flash('El usuario no esta registrado!! Por favor registrese')
-      return  redirect(url_for('index'))
+      flash('El usuario no hace parte de los empleados de la aplicacion!! ')
+      return  redirect(url_for('loginEmpleado'))
          
     #si el password coincide con el del usuario...
     if password == resultado[0]:
